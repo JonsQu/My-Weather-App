@@ -7,16 +7,33 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
+    var loc: CLLocationManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.loc = CLLocationManager()
+        self.loc?.delegate = self
+        self.loc?.requestAlwaysAuthorization()
+        self.loc?.requestWhenInUseAuthorization()
+        self.loc?.startUpdatingLocation()
         return true
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.loc?.startUpdatingLocation()
+        if let location = locations.first {
+            print("Found user's location: \(location)")
+            self.loc?.stopUpdatingLocation()
+            
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
