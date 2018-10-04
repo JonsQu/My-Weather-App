@@ -33,14 +33,50 @@
                     <view key="view" contentMode="scaleToFill" id="dXZ-Us-Kg2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-nZ-woJ">
+                                <rect key="frame" x="112" y="331" width="151" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FlR-te-h1R"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-FH-oq1">
+                                <rect key="frame" x="112" y="293" width="151" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-kI-76w">
+                                <rect key="frame" x="112" y="489" width="151" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="trailing" secondItem="aw8-kI-76w" secondAttribute="trailing" id="3vi-ag-HZv"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="centerY" secondItem="dXZ-Us-Kg2" secondAttribute="centerY" id="5fq-PB-zvg"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="leading" secondItem="aw8-kI-76w" secondAttribute="leading" id="9ZX-gF-gOF"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="leading" secondItem="Dpf-FH-oq1" secondAttribute="leading" id="Fkv-V0-bbN"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="leading" secondItem="CmA-Q9-QkW" secondAttribute="leading" constant="112" id="N3B-qM-vYU"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="centerX" secondItem="dXZ-Us-Kg2" secondAttribute="centerX" id="PZC-O6-so3"/>
+                            <constraint firstItem="aw8-kI-76w" firstAttribute="top" secondItem="Wn2-nZ-woJ" secondAttribute="bottom" constant="8" id="clU-M4-mKR"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="trailing" secondItem="Dpf-FH-oq1" secondAttribute="trailing" id="d08-yq-qqD"/>
+                            <constraint firstItem="Wn2-nZ-woJ" firstAttribute="top" secondItem="Dpf-FH-oq1" secondAttribute="bottom" constant="8" id="hjh-SJ-MAR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CmA-Q9-QkW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Current" id="eXX-ie-u6Q"/>
+                    <connections>
+                        <outlet property="location" destination="Dpf-FH-oq1" id="PKp-vf-Elr"/>
+                        <outlet property="temperature" destination="aw8-kI-76w" id="yRx-5k-qx6"/>
+                        <outlet property="weatherImage" destination="Wn2-nZ-woJ" id="R7A-dV-BjS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jf8-7e-ljh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="-520"/>
+            <point key="canvasLocation" x="3240.8000000000002" y="-520.19704433497543"/>
         </scene>
         <!--Cities-->
         <scene sceneID="aMh-El-ebB">
