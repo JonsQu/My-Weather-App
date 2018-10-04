@@ -10,6 +10,9 @@ import UIKit
 
 class CurrentViewController: UIViewController {
 
+    @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var temperature: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
