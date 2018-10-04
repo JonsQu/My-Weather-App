@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29015DEA21669C0A003F88CF /* CitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29015DE921669C0A003F88CF /* CitiesTableViewController.swift */; };
+		29015DEC2166B146003F88CF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29015DEB2166B146003F88CF /* WeatherModel.swift */; };
 		29B75A18216537690082D15B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A17216537690082D15B /* AppDelegate.swift */; };
 		29B75A1A216537690082D15B /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B75A19216537690082D15B /* CurrentViewController.swift */; };
 		29B75A1D216537690082D15B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B75A1B216537690082D15B /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		29015DE921669C0A003F88CF /* CitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewController.swift; sourceTree = "<group>"; };
+		29015DEB2166B146003F88CF /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		29B75A14216537690082D15B /* My Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B75A17216537690082D15B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29B75A19216537690082D15B /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				29B75A17216537690082D15B /* AppDelegate.swift */,
 				29B75A19216537690082D15B /* CurrentViewController.swift */,
+				29015DEB2166B146003F88CF /* WeatherModel.swift */,
 				29B75A1B216537690082D15B /* Main.storyboard */,
 				29B75A4521653CBB0082D15B /* ForecastTabelViewController.swift */,
 				29015DE921669C0A003F88CF /* CitiesTableViewController.swift */,
@@ -266,6 +269,7 @@
 				29B75A18216537690082D15B /* AppDelegate.swift in Sources */,
 				29015DEA21669C0A003F88CF /* CitiesTableViewController.swift in Sources */,
 				29B75A4621653CBB0082D15B /* ForecastTabelViewController.swift in Sources */,
+				29015DEC2166B146003F88CF /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
