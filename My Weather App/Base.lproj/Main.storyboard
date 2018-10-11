@@ -10,23 +10,6 @@
     </dependencies>
     <scenes>
         <!--Current-->
-        <scene sceneID="bZ0-aU-PKh">
-            <objects>
-                <navigationController storyboardIdentifier="currentNav" id="FN1-sV-l1H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Current" id="YCt-3l-YWJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LK2-cj-HI1">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="6vy-R6-HJ1" kind="relationship" relationship="rootViewController" id="v5I-8s-iLb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r3r-Vo-qsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2345" y="-519"/>
-        </scene>
-        <!--Current-->
         <scene sceneID="g37-1a-g0s">
             <objects>
                 <viewController title="Current" id="6vy-R6-HJ1" customClass="CurrentViewController" customModule="My_Weather_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,16 +23,14 @@
                                     <constraint firstAttribute="height" constant="150" id="FlR-te-h1R"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-FH-oq1">
-                                <rect key="frame" x="112" y="293" width="151" height="30"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-FH-oq1">
+                                <rect key="frame" x="112" y="308" width="151" height="15"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-kI-76w">
-                                <rect key="frame" x="112" y="489" width="151" height="30"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-kI-76w">
+                                <rect key="frame" x="112" y="489" width="151" height="15"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -67,9 +48,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CmA-Q9-QkW"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Current" id="CTe-7N-JQ5"/>
                     <navigationItem key="navigationItem" title="Current" id="eXX-ie-u6Q"/>
                     <connections>
-                        <outlet property="location" destination="Dpf-FH-oq1" id="PKp-vf-Elr"/>
+                        <outlet property="city" destination="Dpf-FH-oq1" id="ACO-Ok-z2s"/>
                         <outlet property="temperature" destination="aw8-kI-76w" id="yRx-5k-qx6"/>
                         <outlet property="weatherImage" destination="Wn2-nZ-woJ" id="R7A-dV-BjS"/>
                     </connections>
@@ -101,28 +83,12 @@
                             <outlet property="delegate" destination="t5q-ua-WoI" id="Crn-PO-w8c"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Cities" id="DfP-zl-mZM"/>
                     <navigationItem key="navigationItem" title="Cities" id="2hL-Hy-xaR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRK-mx-8mm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="1141"/>
-        </scene>
-        <!--Cities-->
-        <scene sceneID="IYP-xH-7az">
-            <objects>
-                <navigationController storyboardIdentifier="citiesNav" id="O3o-tc-Fer" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cities" id="wDm-Pi-KPn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ok6-eG-4H0">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="t5q-ua-WoI" kind="relationship" relationship="rootViewController" id="dbL-CR-Gpr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-A4-tvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2289" y="1141"/>
+            <point key="canvasLocation" x="2423" y="848"/>
         </scene>
         <!--Forecast-->
         <scene sceneID="ILF-4w-U5u">
@@ -147,28 +113,12 @@
                             <outlet property="delegate" destination="we3-wy-edL" id="WfI-Ww-Wtg"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Forecast" id="uVM-EJ-WRV"/>
                     <navigationItem key="navigationItem" title="Forecast" id="kr6-nz-9lg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmr-b7-kuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3241" y="308"/>
-        </scene>
-        <!--Forecast-->
-        <scene sceneID="VaI-6U-5Jt">
-            <objects>
-                <navigationController storyboardIdentifier="forecastNav" id="8PI-in-Pbw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Forecast" id="3c9-Us-FQu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RDq-01-h3R">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="we3-wy-edL" kind="relationship" relationship="rootViewController" id="7lb-Cv-BD0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vkd-zd-obr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2286" y="308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5GK-ud-l7i">
@@ -176,13 +126,14 @@
                 <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="XJO-3J-dGH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L5k-ew-x5X">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FN1-sV-l1H" kind="relationship" relationship="viewControllers" id="pdp-3f-JWv"/>
-                        <segue destination="8PI-in-Pbw" kind="relationship" relationship="viewControllers" id="BT8-ll-MHu"/>
-                        <segue destination="O3o-tc-Fer" kind="relationship" relationship="viewControllers" id="iXX-FS-9vG"/>
+                        <segue destination="6vy-R6-HJ1" kind="relationship" relationship="viewControllers" id="Ifw-sL-3PS"/>
+                        <segue destination="we3-wy-edL" kind="relationship" relationship="viewControllers" id="soO-cb-Rqh"/>
+                        <segue destination="t5q-ua-WoI" kind="relationship" relationship="viewControllers" id="eld-11-fRH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLE-xI-p9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
